@@ -10,7 +10,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-    respond_with Entry.create(params[:entry])
+    respond_with Entry.create(entry_params)
   end
 
   def update
@@ -20,5 +20,11 @@ class EntriesController < ApplicationController
   def destroy
     respond_with Entry.destroy(params[:id])
   end
+
+  private
+
+    def entry_params
+      params.require(:entry).permit(:name)
+    end
 
 end
