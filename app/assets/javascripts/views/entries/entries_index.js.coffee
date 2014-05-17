@@ -7,6 +7,7 @@ class RaffleBackbonejs.Views.EntriesIndex extends Backbone.View
 
   initialize: ->
     @collection.on('reset', @render, this)
+    @collection.on('add', @render, this)
 
   render: ->
     $(@el).html(@template(entries: @collection))
