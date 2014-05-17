@@ -1,2 +1,4 @@
 <h1>Raffle</h1>
-<%= @entries %>
+<% for entry in @entries.models: %>
+  <li><%= entry.get('name') %></li>
+<% end %>
