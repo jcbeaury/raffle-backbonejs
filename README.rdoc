@@ -1,6 +1,6 @@
 == Raffle - backbone.js
 
-This is a simple rails app with backbonejs used to simulate a Raffle.
+This is a simple rails app that uses backbonejs to simulate a Raffle.
 The purpose of this is to compare the differences between these javascript frameworks:
 
 * Backbone
