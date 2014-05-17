@@ -1,0 +1,10 @@
+== Raffle - backbone.js
+
+This is a simple rails app with backbonejs used to simulate a Raffle.
+The purpose of this is to compare the differences between these javascript frameworks:
+
+* Backbone
+* Angular
+* Ember
+
+Each of these js frameworks has its own version of Raffle on my github page.
