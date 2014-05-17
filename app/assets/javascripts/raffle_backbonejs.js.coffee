@@ -3,7 +3,9 @@ window.RaffleBackbonejs =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: ->
+    new RaffleBackbonejs.Routers.Entries()
+    Backbone.history.start()
 
 $(document).ready ->
   RaffleBackbonejs.initialize()
