@@ -21,3 +21,4 @@ class RaffleBackbonejs.Views.EntriesIndex extends Backbone.View
   createEntry: (event) ->
     event.preventDefault()
     @collection.create name: $('#new-entry-name').val()
+    $('#new-entry')[0].reset()
