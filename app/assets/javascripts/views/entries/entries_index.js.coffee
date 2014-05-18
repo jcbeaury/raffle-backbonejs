@@ -22,6 +22,7 @@ class RaffleBackbonejs.Views.EntriesIndex extends Backbone.View
     event.preventDefault()
     attributes = name: $('#new-entry-name').val()
     @collection.create attributes,
+      wait: true
       success: -> $('#new-entry')[0].reset()
       error: @handleError
 
