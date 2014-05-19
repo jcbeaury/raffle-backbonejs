@@ -5,7 +5,7 @@ class RaffleBackbonejs.Routers.Entries extends Backbone.Router
 
   initialize: ->
     @collection = new RaffleBackbonejs.Collections.Entries()
-    @collection.fetch({reset: true})
+    @collection.reset($('#container').data('entries'))
 
   index: ->
     view = new RaffleBackbonejs.Views.EntriesIndex(collection: @collection)
