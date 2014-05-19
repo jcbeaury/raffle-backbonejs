@@ -4,6 +4,7 @@ class RaffleBackbonejs.Views.EntriesIndex extends Backbone.View
 
   events:
     'submit #new-entry': 'createEntry'
+    'click #draw': 'drawWinner'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -17,6 +18,10 @@ class RaffleBackbonejs.Views.EntriesIndex extends Backbone.View
   appendEntry: (entry) ->
     view = new RaffleBackbonejs.Views.Entry(model: entry)
     $('#entries').append(view.render().el)
+
+  drawWinner: (event) ->
+    event.preventDefault()
+    @collection.drawWinner()
 
   createEntry: (event) ->
     event.preventDefault()
