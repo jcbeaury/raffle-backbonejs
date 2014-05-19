@@ -5,6 +5,7 @@ RaffleBackbonejs::Application.routes.draw do
   end
 
   root to: "main#index"
+  get '*path', to: 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

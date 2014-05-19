@@ -5,7 +5,7 @@ window.RaffleBackbonejs =
   Routers: {}
   initialize: ->
     new RaffleBackbonejs.Routers.Entries()
-    Backbone.history.start()
+    Backbone.history.start(pushState: true)
 
 $(document).ready ->
   RaffleBackbonejs.initialize()
